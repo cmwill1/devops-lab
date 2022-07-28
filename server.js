@@ -22,6 +22,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/students', (req, res) => {
+    rollbar.info('Students list was requested')
     res.status(200).send(students)
 })
 
